@@ -1,0 +1,178 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #b30000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#brojac {
+    font-weight: bold;
+    color: #aaa;
+}
+
+
+.katalog-mreza {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.kartica {
+    box-sizing: border-box;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    width: 100%;
+}
+
+.kartica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(179, 0, 0, 0.4);
+}
+
+.kartica img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #111;
+}
+
+.kartica-sadrzaj {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.kartica h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.kartica .kategorija {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kartica .vrijednost {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.kartica a {
+    display: inline-block;
+    margin-top: auto;
+    text-align: center;
+    padding: 8px;
+    background-color: #b30000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.kartica a:hover {
+    background-color: #ff1a1a;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.istaknuto {
+    border: 2px solid #f1c40f;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+}
+.istaknuto .vrijednost {
+    color: #f1c40f;
+}
+
+.zasivljeno {
+    opacity: 0.6;
+    filter: grayscale(80%);
+}
+.zasivljeno a {
+    background-color: #555;
+    pointer-events: none;
+}
+
+
+#empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b30000;
+    margin-top: 24px;
+    font-weight: bold;
+    padding: 16px;
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.skriveno {
+    display: none;
+}
+
+#list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+#list > article {
+    min-width: 0;
+}
+
+#list img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+@media (min-width: 640px) {
+    #list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    #list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
