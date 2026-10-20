@@ -29,8 +29,9 @@ function createCard(film) {
     year.classList.add("vrijednost");
 
     const link = document.createElement("a");
-    link.href = `https://www.themoviedb.org/search?query=${encodeURIComponent(film.name)}`;
+    link.href = `https://www.themoviedb.org`;
     link.textContent = "Više informacija";
+    link.target = "_blank";
 
     content.appendChild(title);
     content.appendChild(year);
